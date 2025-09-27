@@ -1,0 +1,135 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  /* Warm Social Theme - Dark teal background with coral accents */
+  --color-bg: #1a2e2e;
+  --color-fg: #f0f4f4;
+  --color-accent: #ff6b6b;
+  --color-surface: #2a3f3f;
+  --color-border: #3a4f4f;
+  --color-muted: #8a9a9a;
+}
+
+[data-theme="celo"] {
+  --color-bg: #000000;
+  --color-fg: #ffffff;
+  --color-accent: #fbcc5c;
+  --color-surface: #1a1a1a;
+  --color-border: #333333;
+  --color-muted: #888888;
+}
+
+[data-theme="solana"] {
+  --color-bg: #1a0d2e;
+  --color-fg: #ffffff;
+  --color-accent: #9945ff;
+  --color-surface: #2a1a3e;
+  --color-border: #3a2a4e;
+  --color-muted: #8a7a9a;
+}
+
+[data-theme="base"] {
+  --color-bg: #0f1419;
+  --color-fg: #ffffff;
+  --color-accent: #0052ff;
+  --color-surface: #1f2937;
+  --color-border: #374151;
+  --color-muted: #9ca3af;
+}
+
+[data-theme="coinbase"] {
+  --color-bg: #0a0e27;
+  --color-fg: #ffffff;
+  --color-accent: #0052ff;
+  --color-surface: #1a1f3a;
+  --color-border: #2a2f4a;
+  --color-muted: #8a8faa;
+}
+
+@layer base {
+  * {
+    @apply border-gray-200;
+  }
+  
+  body {
+    @apply bg-bg text-fg font-sans antialiased;
+    font-feature-settings: "rlig" 1, "calt" 1;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply text-fg;
+  }
+}
+
+@layer components {
+  .glass-card {
+    @apply bg-surface border border-border rounded-xl backdrop-blur-sm;
+    background: rgba(42, 63, 63, 0.8);
+    border-color: rgba(58, 79, 79, 0.3);
+  }
+
+  .btn-primary {
+    @apply bg-accent text-white px-6 py-3 rounded-lg font-medium hover:opacity-90 transition-all duration-200 shadow-lg hover:shadow-xl;
+  }
+
+  .btn-secondary {
+    @apply bg-surface text-fg border border-border px-6 py-3 rounded-lg font-medium hover:bg-opacity-80 transition-all duration-200;
+  }
+
+  .btn-outline {
+    @apply border border-accent text-accent px-6 py-3 rounded-lg font-medium hover:bg-accent hover:text-white transition-all duration-200;
+  }
+
+  .input-field {
+    @apply bg-surface border border-border rounded-lg px-4 py-3 text-fg placeholder-muted focus:border-accent focus:outline-none transition-colors duration-200;
+  }
+
+  .metric-card {
+    @apply glass-card p-6 hover:bg-opacity-90 transition-all duration-200;
+  }
+
+  .template-card {
+    @apply glass-card p-4 hover:border-accent transition-all duration-200 cursor-pointer;
+  }
+
+  .proposal-card {
+    @apply glass-card p-6 hover:border-accent transition-all duration-200;
+  }
+
+  .video-player {
+    @apply bg-surface rounded-lg overflow-hidden shadow-lg;
+  }
+
+  .dao-stats {
+    @apply grid grid-cols-1 md:grid-cols-3 gap-4;
+  }
+
+  .creator-tools {
+    @apply space-y-6;
+  }
+
+  .donation-tracker {
+    @apply glass-card p-4 space-y-3;
+  }
+}
+
+@layer utilities {
+  .text-gradient {
+    @apply bg-gradient-to-r from-accent to-pink-400 bg-clip-text text-transparent;
+  }
+
+  .bg-gradient-primary {
+    background: linear-gradient(135deg, var(--color-accent) 0%, #ff8e8e 100%);
+  }
+
+  .animate-float {
+    animation: float 6s ease-in-out infinite;
+  }
+
+  @keyframes float {
+    0%, 100% { transform: translateY(0px); }
+    50% { transform: translateY(-20px); }
+  }
+}
