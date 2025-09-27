@@ -1,0 +1,30 @@
+{
+  "accountAssociation": {
+    "header": "",
+    "payload": "",
+    "signature": ""
+  },
+  "frame": {
+    "version": "1",
+    "name": "CharityVision",
+    "subtitle": "Built with Zara",
+    "description": "CharityVision is a Base Mini App built with Zara.",
+    "iconUrl": "https://0co.to/images/zara-2.png",
+    "homeUrl": "https://4e107840499848129d7b3d1065d40756-16vb.vercel.app",
+    "splashImageUrl": "https://4e107840499848129d7b3d1065d40756-16vb.vercel.app/splash.png",
+    "splashBackgroundColor": "#000000",
+    "heroImageUrl": "https://4e107840499848129d7b3d1065d40756-16vb.vercel.app/image.png",
+    "tagline": "CharityVision",
+    "screenshotUrls": [
+      "https://4e107840499848129d7b3d1065d40756-16vb.vercel.app/screenshot.png",
+      "https://4e107840499848129d7b3d1065d40756-16vb.vercel.app/screenshot.png"
+    ],
+    "primaryCategory": "social",
+    "tags": [
+      "base",
+      "miniapp",
+      "onchainkit"
+    ],
+    "webhookUrl": "https://4e107840499848129d7b3d1065d40756-16vb.vercel.app/api/webhook"
+  }
+}
